@@ -1,0 +1,15 @@
+How to Reverse an Int in Python
+
+There are a couple of ways to do this without converting Int to Str
+
+1. While Loop
+2. Recursion
+
+While Loop Algorithm
+    # Logic
+(1) Initialize variable reverse = 0
+(2) Loop While number > 0:
+    (2a) remainder = 100 % 10
+    (2b) reverse = (reverse * 10) + remainder
+    (2c) x = x // 10
+return reverse
