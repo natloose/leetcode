@@ -1,16 +1,16 @@
 # 7. Reverse Integer
 
-x = 1009
+x = -10009
 
 # First Solution (While Loop)
 
 
-def reverse(x):
-    if x >= 2 ** 31 - 1 or x < -2 ** 31:
+def reverse_int(x):
+    if x >= 2 ** 31 -1 or x <= -2 ** 31:
         print(0)
     else:
         minus = -1 if x < 0 else 1
-        x = x * minus
+        x = x*minus
         reverse = 0
 
         while x > 0:
@@ -18,13 +18,14 @@ def reverse(x):
             reverse = (reverse * 10) + remainder
             x = x // 10
 
-        if reverse >= 2 ** 31 - 1 or x < -2 ** 31:
+        if x >= 2 ** 31 - 1 or x < -2 ** 31:
             print(0)
         else:
-            print(reverse * minus)
+            print(reverse*minus)
 
 
-reverse(x)
+reverse_int(x)
+
 
 # Second Solution
 '''def reverse(x):
